@@ -1,16 +1,67 @@
 # Security Policy
 
+SUSE Rancher is deeply committed to safeguarding the security of our products, and endeavors to resolve security issues in a timely manner.
+
+We extend our heartfelt thanks to the security researchers and users who diligently report vulnerabilities. Your invaluable contributions enhance our ability to improve our systems and protect our user community.
+
+We go through all reported security issues, reviewing them with the project's maintainers and coordinating the fixes and disclosures. We credit all accepted reports from users and security researchers in our [Security Advisories](https://github.com/rancher/rancher/security/advisories).
+
+## Reporting a Vulnerability
+
+Please before reporting a vulnerability, make sure it impacts a [supported version](#supported-versions).
+
+### What types of issue to report
+
+This reporting channel focuses on bugs with potential security impact on products within the Rancher ecosystem. Example of valid reports:
+
+- XSS on Rancher Manager UI.
+- Privilege escalation through Rancher Manager RBAC.
+
+If you are unsure, check the types of issues NOT to report below.
+
+### What types of issue NOT to report
+
+Some issues are outside of the scope of this channel, and therefore should not be reported:
+
+- CVEs that were found by CVE scanners (e.g. Trivy, Snyk). Public CVEs do not need to be reported as they are fixed as part of the development process.
+- Improvements or questions on the security hardening guides. These should be reported as a new [rancher-docs issue](https://github.com/rancher/rancher-docs/issues/new/choose).
+- Issues or bugs that aren't security related. These should be reported as a new [rancher issue](https://github.com/rancher/rancher/issues/new/choose). 
+- Issues with mirrored container images, instead please report them via the security channels of the specific upstream project.
+- Issues that require the user to disable security features or downgrade the security of its environment in order for the vulnerability to be exploited.
+- Issues that can only be exploited by the administrator itself (after all, the admin is already a privileged user and implicitly trusted).
+- Issues regarding missing HTTP headers or exposure of versions in HTTP headers.
+- Vulnerabilities affecting directly a user or customer environment. Such vulnerabilities must be reported directly to the affected user/customer. Be advised that such reports can constitute law infringement under certain jurisdictions.
+
+If going through all the examples above you are still in doubt, please go ahead and use this channel. After all, it's better be safe than sorry.
+
 ## Supported Versions
 
 Please review our [support maintenance and terms](https://rancher.com/support-maintenance-terms/) to view the current support lifecycle.
 
 ## Reporting a Vulnerability
 
-SUSE Rancher supports responsible disclosure and endeavors to resolve security issues in a reasonable timeframe. To report a security vulnerability, email security-rancher@suse.com . You may (but are not required to) use the GPG key `rsa4096/C9DF50BDAC351DA9` for encrypted communication.
+To report a security vulnerability, email security-rancher@suse.com. You can optionally use the GPG key `rsa4096/C9DF50BDAC351DA9` for encrypted communication.
+
+We currently do not have a bounty rewards program in place, and nor do we offer swags. However, we genuinely appreciate the vigilance and expertise of our user community in helping us maintain the highest security standards.
+
+We strive to ackknowledge receiving submissions within 5 working days, please wait until that time has past before asking for a status update.
+
+The information contained in your report must be treated as embargoed and must not be shared publicly, unless explicitly agreed with us first. This is to protect the Rancher ecosystem users and enable us to follow through our coordinated disclosure process. The information shall be kept embargoed until a fix is released.
+
+### What information to provide
+
+Feel free to get in touch in whatever way works best for you! However, if you’re able to include the information below in your report, that would be incredibly helpful and much appreciated:
+
+- Product name and version where the issue was observed. If the issue was observed on the source code, the link to the specific code in GitHub instead.
+- Description of the problem.
+- Type of the issue and impact when exploited.
+- Steps to reproduce or a proof of concept.
+
+The more information you provide, the faster we will be able to reproduce the issue and address your concerns more effectively.
 
 ### GPG Key - `security-rancher@suse.com`
 
-```
+```pgp
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGHvxFcBEADibmTaKMTFbiMRAxtM5OjMOAjko7CovpnYSUOuRYi4IblFKIjL
@@ -64,4 +115,3 @@ ArCzVjxOM8JhL941OADyL1A=
 =l4yT
 -----END PGP PUBLIC KEY BLOCK-----
 ```
-
