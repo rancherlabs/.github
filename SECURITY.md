@@ -8,6 +8,13 @@ We go through all reported security issues, reviewing them with the project's ma
 
 ## Reporting a Vulnerability
 
+> [!CAUTION]
+> Do not attempt to test a possible vulnerability or an exploit on systems that
+> you do not have an explicit authorization of its owner.
+> It's fine to report a theoretical vulnerability, one that doesn't have a proof
+> of concept (POC), in case you don't have access to an authorized system to
+> test.
+
 Please before reporting a vulnerability, make sure it impacts a [supported version](#supported-versions).
 
 ### What types of issue to report
@@ -44,7 +51,7 @@ To report a security vulnerability, email security-rancher@suse.com. You can opt
 
 We currently do not have a bounty rewards program in place, and nor do we offer swags. However, we genuinely appreciate the vigilance and expertise of our user community in helping us maintain the highest security standards.
 
-We strive to ackknowledge receiving submissions within 5 working days, please wait until that time has past before asking for a status update.
+We strive to acknowledge receiving submissions within 5 working days, please wait until that time has past before asking for a status update.
 
 The information contained in your report must be treated as embargoed and must not be shared publicly, unless explicitly agreed with us first. This is to protect the Rancher ecosystem users and enable us to follow through our coordinated disclosure process. The information shall be kept embargoed until a fix is released.
 
@@ -55,7 +62,11 @@ Feel free to get in touch in whatever way works best for you! However, if you’
 - Product name and version where the issue was observed. If the issue was observed on the source code, the link to the specific code in GitHub instead.
 - Description of the problem.
 - Type of the issue and impact when exploited.
-- Steps to reproduce or a proof of concept.
+- Steps to reproduce or a proof of concept (only on systems you are explicitly
+  authorized to test).
+- It is mandatory to inform if AI tools were used to find the issue being
+  reported, to automate or to write the report, POC code or possible patch. If
+  this was the case, then inform which AI tools and models were used.
 
 The more information you provide, the faster we will be able to reproduce the issue and address your concerns more effectively.
 
